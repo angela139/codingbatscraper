@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodingBat Report Scraper</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+    <h2>CodingBat Report Login Page</h2>
+    <p>Your data will be sent to CodingBat and get data about your students</p>
+    <div class="login">
+        <form action = "/data" id="login" method= "POST">
+            <label><b>ID/Email</b>
+        </label>
+        <input type="text" name="email" placeholder="ID/Email">
+        <br><br>
+        <label><b>Password
+        </b>
+        </label>
+        <input type="Password" name="pass" placeholder="Password">
+        <br><br>
+            <label><b>Problem Set</b>
+        </label>
+        <input type="problem_url" name="url" placeholder="Problem Set">
+            <br><br>
+        <input type="submit" name="log" id="log" value="Log In Here">
+        <br><br>
+        </form>
+    </div>
+</body>
+</html>

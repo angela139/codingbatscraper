@@ -1,0 +1,51 @@
+@media (max-width: 767.98px) {
+    .style-table {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+        width: 80vw;
+        height: 60vh;
+        overflow: auto;
+        text-align: center;
+        font-size: 2.8vw;
+        font-weight: bold;
+    }
+
+    h1 {
+       margin: 3.5vw;
+       font-size: 3.5vw;
+       text-align: center;
+    }
+    .filtering {
+       font-size: 3.0vw;
+       text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .style-table {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+        width: 50vw;
+        height: 50vh;
+        overflow: auto;
+        text-align: center;
+        font-size: 1.3vw;
+        font-weight: bold;
+    }
+
+    h1 {
+       margin: 2.5vw;
+       font-size: 2.8vw;
+       text-align: center;
+    }
+    .filtering {
+       font-size: 1.0vw;
+       text-align: center;
+    }
+}
+
+#current_status {
+    color: red;
+}

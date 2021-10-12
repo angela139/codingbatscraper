@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodingBat Report</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+    <h1>Student CodingBat Data</h1>
+        <div class="filtering">
+          <input type="checkbox" id="zero" onclick="show()">
+          <label for="zero"> Hide Block 0</label>
+            <br><br>
+            <input type="checkbox" id="one" onclick="show()">
+          <label for="one"> Hide Block 1</label>
+            <br><br>
+            <input type="checkbox" id="three" onclick="show()">
+          <label for="three"> Hide Block 3</label>
+            <br><br>
+        </div>
+
+    <div class="vertical-scrollable style-table table-responsive">
+        <table class="table table-striped table-bordered">
+          <tr class="table-primary">
+            <th scope="col">Block</th>
+            <th scope="col">Full Name</th>
+              <th scope="col">Status</th>
+            <th scope="col">Total Problems Completed</th>
+          </tr>
+            {% for i in table_array %}
+                <tr scope="row" class="student_row">
+                    <td>{{ i["block"] }}</td>
+                    <td>{{ i["name"] }}</td>
+                    <td id="current_status">{{ i["status"] }}</td>
+                    <td>{{ i["total"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+     <script>
+        const table = document.getElementsByClassName('table')[0];
+        const cells = table.getElementsByTagName('td');
+        const rows = table.getElementsByClassName('student_row');
+        const zero_check = document.getElementById("zero");
+        const one_check = document.getElementById("one");
+        const three_check = document.getElementById("three");
+        for (let cell of cells) {
+            if (cell.innerHTML == "Done") {
+                cell.style.color = "green";
+            }
+        }
+        function show(){
+            for (let row of rows) {
+                if (row.getElementsByTagName('td')[0].innerHTML == "0" && zero_check.checked == true) {
+                    row.style.display = "none";
+                }
+                else if (row.getElementsByTagName('td')[0].innerHTML == "1" && one_check.checked == true) {
+                    row.style.display = "none";
+                }
+                else if (row.getElementsByTagName('td')[0].innerHTML == "3" && one_check.checked == true) {
+                    row.style.display = "none";
+                }
+                else {
+                    row.style.display = "table-row";
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

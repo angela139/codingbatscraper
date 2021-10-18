@@ -20,6 +20,8 @@
             <br><br>
         </div>
 
+    <button id="sort" onclick="sortTable()" type="button" class="btn btn-default">sort</button>
+
     <div class="vertical-scrollable style-table table-responsive">
         <table class="table table-striped table-bordered">
           <tr class="table-primary">
@@ -39,36 +41,7 @@
         </table>
     </div>
 
-     <script>
-        const table = document.getElementsByClassName('table')[0];
-        const cells = table.getElementsByTagName('td');
-        const rows = table.getElementsByClassName('student_row');
-        const zero_check = document.getElementById("zero");
-        const one_check = document.getElementById("one");
-        const three_check = document.getElementById("three");
-        for (let cell of cells) {
-            if (cell.innerHTML == "Done") {
-                cell.style.color = "green";
-            }
-        }
-        function show(){
-            for (let row of rows) {
-                if (row.getElementsByTagName('td')[0].innerHTML == "0" && zero_check.checked == true) {
-                    row.style.display = "none";
-                }
-                else if (row.getElementsByTagName('td')[0].innerHTML == "1" && one_check.checked == true) {
-                    row.style.display = "none";
-                }
-                else if (row.getElementsByTagName('td')[0].innerHTML == "3" && one_check.checked == true) {
-                    row.style.display = "none";
-                }
-                else {
-                    row.style.display = "table-row";
-                }
-            }
-        }
-
-    </script>
+     <script src="static/tablesort.js"></script>
 
 </body>
 </html>

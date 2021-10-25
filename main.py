@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from operator import itemgetter
 
 
 def student_data(email, password, url):
@@ -36,13 +37,15 @@ def student_data(email, password, url):
                     else:
                         name += char
                 total_done = rows.find_all("td")[-1].get_text()
-                info_array.append({"block": block, "name": name.strip(), "total": total_done})
+                info_array.append({"block": block, "name": name.strip().replace(" ", ", "), "total": total_done})
 
             for value in info_array:
                 if int(value["total"]) == num_problems:
                     value["status"] = "Done"
                 else:
                     value["status"] = "Not Done"
+
+            info_array = sorted(info_array, key=itemgetter('block', 'status', 'name'))
 
         except:
             print("Error")

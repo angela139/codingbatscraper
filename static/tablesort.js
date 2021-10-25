@@ -26,28 +26,3 @@ function show(){
         }
     }
 }
-
-function sortTable() {
-  var switching, i, x, y, shouldSwitch;
-  switching = true;
-  while (switching) {
-    switching = false;
-    for (i = 1; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("td")[2];
-      y = rows[i + 1].getElementsByTagName("td")[2];
-      // Check if the two rows should switch place:
-      if (x.innerHTML.toLowerCase().substring(0,1) > y.innerHTML.toLowerCase().substring(0,1)) {
-        // If so, mark as a switch and break the loop:
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-    }
-  }
-}
-
-sortTable();

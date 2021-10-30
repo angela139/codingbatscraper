@@ -27,6 +27,7 @@
             <th scope="col">Full Name</th>
               <th scope="col">Status</th>
             <th scope="col">Total Problems Completed</th>
+              <th scope="col">Missing Problems</th>
           </tr>
             {% for i in table_array %}
                 <tr scope="row" class="student_row">
@@ -34,6 +35,7 @@
                     <td>{{ i["name"] }}</td>
                     <td id="current_status">{{ i["status"] }}</td>
                     <td>{{ i["total"] }}</td>
+                    <td>{{ i["missing"] }}</td>
                 </tr>
             {% endfor %}
         </table>

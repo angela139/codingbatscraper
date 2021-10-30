@@ -18,7 +18,7 @@ function show(){
         else if (row.getElementsByTagName('td')[0].innerHTML == "1" && one_check.checked == true) {
             row.style.display = "none";
         }
-        else if (row.getElementsByTagName('td')[0].innerHTML == "3" && one_check.checked == true) {
+        else if (row.getElementsByTagName('td')[0].innerHTML == "3" && three_check.checked == true) {
             row.style.display = "none";
         }
         else {

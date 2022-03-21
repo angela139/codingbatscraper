@@ -14,7 +14,7 @@ def student_data(email, password, url):
 
     LOGIN_URL = "https://codingbat.com/login"
     page_filter = url + "&form="
-    REPORT_URL = "https://codingbat.com/report?java=on&stock=on&custom=on&sortname=on&homepath=%2Fhome%2Fsimona1%40sfusd.edu%2F" + page_filter
+    REPORT_URL = "https://codingbat.com/report?java=on&python=on&stock=on&custom=on&sortname=on&homepath=%2Fhome%2Fsimona1%40sfusd.edu%2F" + page_filter
     info_array = []
 
     with requests.Session() as s:

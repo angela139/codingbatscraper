@@ -8,17 +8,13 @@
 </head>
 <body>
     <h1>Student CodingBat Data</h1>
-        <div class="filtering">
-          <input type="checkbox" id="zero" onclick="show()">
-          <label for="zero"> Hide Block 0</label>
-            <br><br>
-            <input type="checkbox" id="one" onclick="show()">
-          <label for="one"> Hide Block 1</label>
-            <br><br>
-            <input type="checkbox" id="three" onclick="show()">
-          <label for="three"> Hide Block 3</label>
-            <br><br>
-        </div>
+        <form action="data.html" method="post" class="filtering" id="filter">
+          <label>Show Block: </label>
+          <input type="text" id="block_filter">
+          <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          <br><br>
+        </form>
 
     <div class="vertical-scrollable style-table table-responsive">
         <table class="table table-striped table-bordered">
